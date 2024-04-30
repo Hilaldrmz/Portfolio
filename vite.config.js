@@ -21,7 +21,8 @@ export default defineConfig({
       }
     }
   },
-  base: process.env.VITE_NODE_ENV === 'production' ? '/Portfolio/' : '/',
+  // base: process.env.VITE_NODE_ENV === 'production' ? '/Portfolio/' : '/',
+  base: process.env.VITE_Base_URL || '/Portfolio/',
   build: {
     outDir: 'docs'
   }
