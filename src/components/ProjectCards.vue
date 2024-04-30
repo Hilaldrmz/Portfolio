@@ -18,7 +18,6 @@
 <script setup>
 import { ref, defineProps } from 'vue';
 import projectsData from "../data/projects.json"
-import { assets } from "../js/functions.js";
 
 const props = defineProps({
     type: {
