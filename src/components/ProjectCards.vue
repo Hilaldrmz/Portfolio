@@ -9,7 +9,7 @@
                 <button class="small fw-sb" @click="goToProject(project.link)">View Project</button>
             </div>
             <div class="project-image">
-                <img :src="assets(project.image)" alt="Project Image">
+                <img :src="project.image" alt="Project Image">
             </div>
         </div>
     </div>
