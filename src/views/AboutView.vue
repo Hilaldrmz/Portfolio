@@ -84,8 +84,8 @@ import Certificates from "../components/Certificates.vue";
         // z-index: -1;
         border-radius: 14px;
 
-        width: clamp(60vw, 2vw, 66.25vw);
-        height: auto;
+        width: clamp(55vw, 2vw, 959px);
+        min-height: 632px;
 
         h1 {
             font-size: 2.438rem;

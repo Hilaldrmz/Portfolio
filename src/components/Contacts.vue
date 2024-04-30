@@ -36,6 +36,7 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 0 47px;
+        
 
         a>* {
             width: 40px;
