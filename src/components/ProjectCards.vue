@@ -1,17 +1,3 @@
-<!--<template>
-    <div class="projects">
-        <div v-for="project in projects" :key="project.id" class="project-card">
-            <div class="project-info">
-                <h5>{{ project.name }}</h5>
-                <p>{{ project.description }}</p>
-                <button class="small fw-sb" @click="goToProject(project.link)">View Project</button>
-            </div>
-            <div class="project-image">
-                <img :src="project.image" alt="Project Image">
-            </div>
-        </div>
-    </div> 
-</template>-->
 
 <template>
     <div class="projects" v-for="projectType in projects" :key="projectType.type">

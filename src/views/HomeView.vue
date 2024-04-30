@@ -37,8 +37,6 @@ import { useRouter } from 'vue-router'
 import ProjectCards from "../components/ProjectCards.vue";
 
 const router = useRouter();
-console.log(process.env.NODE_ENV)
-
 
 </script>
 
