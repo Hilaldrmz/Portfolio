@@ -1,0 +1,199 @@
+// Color Palette
+
+:root {
+  --bordeaux: #4C1C24;
+  --wild-ginger: #7D4D55;
+  --ancestal: #CCBEC0;
+  --sensuosus-grey: #827D7E;
+  --after-dark: #393233;
+  --bats-cloak: #191112;
+  --cascading-white: #f7f5f6;
+
+  --gradient: linear-gradient(90deg, #4C1C24, #7D4D55);
+
+}
+
+// Color Variables
+$bg-dark: #191112;
+$bg-mid: #393233;
+$bg-light: #f7f5f6;
+$gradient: linear-gradient(90deg, #4C1C24, #7D4D55);
+$primary-color: #4C1C24;
+$secondary-color: #7D4D55;
+$text-light: #f7f5f6;
+$text-dark: #191112;
+$text-low: #CCBEC0;
+$text-medium: #827D7E;
+$text-high: #393233;
+
+// Shadows Variables
+
+$shadow-1: 4px 4px 5px 0 rgba(74, 28, 35, 0.14);
+$shadow-2: 4px 4px 25px 0 hsla(350, 24%, 40%, 0.50);
+
+.glass-card {
+  width: 288px;
+  height: 295px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 30px;
+  border-radius: 14px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 4px 4px 10px 0 rgba(30, 30, 30, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 1.5px;
+  border-image-source: linear-gradient(131deg, #fff 6%, #fff 6%, rgba(248, 246, 247, 0.8) 15%, rgba(255, 255, 255, 0.02) 31%);
+  border-image-slice: 1;
+  background-image: linear-gradient(251deg, var(--brand-primary) 83%, #ffcbd4 31%), linear-gradient(131deg, #fff 6%, #fff 6%, rgba(248, 246, 247, 0.8) 15%, rgba(255, 255, 255, 0.02) 31%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+}
+
+
+
+// Dark Mode
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --color-background: var(--vt-c-black);
+//     --color-background-soft: var(--vt-c-black-soft);
+//     --color-background-mute: var(--vt-c-black-mute);
+
+//     --color-border: var(--vt-c-divider-dark-2);
+//     --color-border-hover: var(--vt-c-divider-dark-1);
+
+//     --color-heading: var(--vt-c-text-dark-1);
+//     --color-text: var(--vt-c-text-dark-2);
+//   }
+// }
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  color: $text-dark;
+  transition: color 0.5s,
+  background-color 0.5s;
+  line-height: 1.6;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  width: 100dvw;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #7d4d554e;
+}
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+
+/// Typograpy
+
+// Base font size is set to 1rem which is equivalent to 16px in most browsers
+$base-font-size: 1rem;
+
+// Scale factor for typography is set to 1.25
+$scale: 1.25;
+
+// Define font weights for Montserrat font
+$font-weights: (
+  'eb': 800,
+  'sb': 600,
+  'r': 400,
+);
+
+// Loop through h1 to h6 headings
+@for $i from 1 through 6 {
+  // Calculate font size based on the base font size and scale factor
+  $font-size: $base-font-size * pow($scale, 7 - $i);
+
+  // Apply calculated font size and other properties to the heading
+  h#{$i},
+  .h#{$i} {
+    font-size: $font-size;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.6;
+
+    // Loop through the defined font weights and create classes for each
+    @each $name, $weight in $font-weights {
+      &.#{'fw-' + $name} {
+        font-weight: $weight;
+      }
+    }
+  }
+}
+
+// Calculate font size for small and smaller text based on the base font size and scale factor
+$small-font-size: $base-font-size / pow($scale, 2);
+$smaller-font-size: $base-font-size / pow($scale, 3);
+
+p,
+.p {
+  font-size: $base-font-size;
+  line-height: 1.6;
+
+  // Loop through the defined font weights and create classes for each
+  @each $name, $weight in $font-weights {
+    &.#{'fw-' + $name} {
+      font-weight: $weight;
+    }
+  }
+}
+
+.small {
+  font-size: $small-font-size;
+
+  // Loop through the defined font weights and create classes for each
+  @each $name, $weight in $font-weights {
+    &.#{'fw-' + $name} {
+      font-weight: $weight;
+    }
+  }
+}
+
+.smaller {
+  font-size: $smaller-font-size;
+
+  // Loop through the defined font weights and create classes for each
+  @each $name, $weight in $font-weights {
+    &.#{'fw-' + $name} {
+      font-weight: $weight;
+    }
+  }
+}
+
+//----------------------------------------------
