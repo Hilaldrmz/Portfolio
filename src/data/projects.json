@@ -6,35 +6,35 @@
                 "id": 1,
                 "name": "Nature",
                 "description": "The project involves the ongoing development of interfaces designed in Figma and coded using Vue.js for the front end.",
-                "image": "/projects/nature.png",
+                "image": "/assets/projects/nature.png",
                 "link": "https://www.figma.com/file/vEpuYy2kI3P9JwhKQw5eDd/Nature?type=design&node-id=149%3A6581&mode=design&t=zQM5OBRGC1XiAmcd-1"
             },
             {
                 "id": 2,
                 "name": "Weather App",
                 "description": "A simple weather application built with Vue.js.",
-                "image": "/projects/Weather-App-Screenshot.gif",
+                "image": "/assets/projects/Weather-App-Screenshot.gif",
                 "link": "https://github.com/Hilaldrmz/Weather-App"
             },
             {
                 "id": 3,
                 "name": "Note App",
                 "description": "A simple note-taking application built with Vue.js.",
-                "image": "/projects/Note-App-ScreenShot.png",
+                "image": "/assets/projects/Note-App-ScreenShot.png",
                 "link": "https://github.com/Hilaldrmz/Note-App"
             },
             {
                 "id": 4,
                 "name": "Quiz App",
                 "description": "A simple quiz application built with Vue.js.",
-                "image": "/projects/App-Screenshot.gif",
+                "image": "/assets/projects/App-Screenshot.gif",
                 "link": "https://github.com/Hilaldrmz/Quiz-App"
             },
             {
                 "id": 5,
                 "name": "Todo App",
                 "description": "A simple todo list application built with Vue.js.",
-                "image": "/projects/todo-app-screenshot.gif",
+                "image": "/assets/projects/todo-app-screenshot.gif",
                 "link": "https://github.com/Hilaldrmz/Todo-App"
             }
         ]
@@ -46,35 +46,35 @@
                 "id": 1,
                 "name": "Weather App",
                 "description": "A simple weather application built with Vue.js.",
-                "image": "/projects/Weather-App-Screenshot.gif",
+                "image": "/assets/projects/Weather-App-Screenshot.gif",
                 "link": "https://github.com/Hilaldrmz/Weather-App"
             },
             {
                 "id": 2,
                 "name": "Note App",
                 "description": "",
-                "image": "/projects/Note-App-ScreenShot.png",
+                "image": "/assets/projects/Note-App-ScreenShot.png",
                 "link": "https://github.com/Hilaldrmz/Note-App"
             },
             {
                 "id": 3,
                 "name": "Quiz App",
                 "description": "",
-                "image": "/projects/App-Screenshot.gif",
+                "image": "/assets/projects/App-Screenshot.gif",
                 "link": "https://github.com/Hilaldrmz/Quiz-App"
             },
             {
                 "id": 4,
                 "name": "Todo App",
                 "description": "",
-                "image": "/projects/todo-app-screenshot.gif",
+                "image": "/assets/projects/todo-app-screenshot.gif",
                 "link": "https://github.com/Hilaldrmz/Todo-App"
             },
             {
                 "id": 5,
                 "name": "Countdown App",
                 "description": "",
-                "image": "/projects/placeholder.png",
+                "image": "/assets/projects/placeholder.png",
                 "link": "https://github.com/Hilaldrmz/Countdown"
             }
         ]
@@ -86,14 +86,14 @@
                 "id": 1,
                 "name": "Currency Converter",
                 "description": "",
-                "image": "/projects/Weather-App-Screenshot.gif",
+                "image": "/assets/projects/Weather-App-Screenshot.gif",
                 "link": "https://github.com/Hilaldrmz/currency-converter"
             },
             {
                 "id": 2,
                 "name": "Medium Clone",
                 "description": "Bootstrap Medium Clone My project where I cloned the design of the Medium website’s homepage.",
-                "image": "/projects/MediumClonePage.gif",
+                "image": "/assets/projects/MediumClonePage.gif",
                 "link": "https://github.com/Hilaldrmz/MediumClone"
             }
         ]
@@ -105,14 +105,14 @@
                 "id": 1,
                 "name": "Nature",
                 "description": "The project involves the ongoing development of interfaces designed in Figma and coded using Vue.js for the front end.",
-                "image": "/projects/nature.png",
+                "image": "/assets/projects/nature.png",
                 "link": "https://www.figma.com/file/vEpuYy2kI3P9JwhKQw5eDd/Nature?type=design&node-id=149%3A6581&mode=design&t=zQM5OBRGC1XiAmcd-1"
             },
             {
                 "id": 2,
                 "name": "Netflix UI",
                 "description": "This Figma project represents a replica of the Netflix user interface",
-                "image": "/projects/netflix.png",
+                "image": "/assets/assets/projects/netflix.png",
                 "link": "https://www.figma.com/file/yroL1LZ6ddWX2VcujKLJMQ/Netflix-UI?type=design&node-id=136%3A12328&mode=design&t=FfpmjrUe5MApRcDP-1"
             }
         ]

@@ -3,22 +3,22 @@
         {
             "id": 1,
             "name": "5 Adimda Git/Github",
-            "image": "/certificates/git-github.png"
+            "image": "assets/certificates/git-github.png"
         },
         {
             "id": 2,
             "name": "Front-en Web Development | First Step for Development",
-            "image": "/certificates/front-end.png"
+            "image": "assets/certificates/front-end.png"
         },
         {
             "id": 3,
             "name": "UI/UX Design Bootcamp 101",
-            "image": "/certificates/ui-ux-design-101.png"
+            "image": "assets/certificates/ui-ux-design-101.png"
         },
         {
             "id": 4,
             "name": "UI/UX Design Bootcamp 102",
-            "image": "/certificates/ui-ux-design-102.png"
+            "image": "assets/certificates/ui-ux-design-102.png"
         }
     ]
 }
