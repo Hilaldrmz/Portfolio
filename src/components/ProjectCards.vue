@@ -9,7 +9,7 @@
                 <button class="small fw-sb" @click="goToProject(project.link)">View Project</button>
             </div>
             <div class="project-image">
-                <img :src="project.image" alt="Project Image">
+                <img :src="assets(project.image)" alt="Project Image">
             </div>
         </div>
     </div>
@@ -18,6 +18,7 @@
 <script setup>
 import { ref, defineProps } from 'vue';
 import projectsData from "../data/projects.json"
+import { assets } from "../js/functions.js";
 
 const props = defineProps({
     type: {
