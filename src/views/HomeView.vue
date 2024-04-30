@@ -16,8 +16,8 @@
             Let's create something great together!
         </p>
         <div class="buttons">
-            <button class="button-primary">Projects</button>
-            <button class="button-secondary">Linkedin</button>
+            <button class="button-primary" @click="$router.push('/projects')">Projects</button>
+            <a class="button-secondary" href="https://www.linkedin.com/in/hilal-durmaz" target="_blank">Linkedin</a>
         </div>
 
         <img class="color-top" src="../assets/colors/homepage-top.png" alt="" srcset="">
@@ -33,7 +33,10 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
 import ProjectCards from "../components/ProjectCards.vue";
+
+const router = useRouter();
 
 
 </script>
@@ -137,6 +140,7 @@ import ProjectCards from "../components/ProjectCards.vue";
             border: solid 2px $text-high;
             background: transparent;
             transition: all 500ms;
+            text-decoration: none;
 
             &:hover {
                 color: $text-light;
