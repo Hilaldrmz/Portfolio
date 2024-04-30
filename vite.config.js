@@ -20,5 +20,8 @@ export default defineConfig({
       }
     }
   },
-  base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/'
+  base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
+  build: {
+    outDir: 'docs'
+  }
 })
