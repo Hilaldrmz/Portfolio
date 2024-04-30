@@ -1,7 +1,7 @@
 <template>
     <div class="certificates">
         <div class="certificate" v-for="certificate in certificates" :key="certificate.id">
-            <img :src="certificate.image" alt="Certificate Image" />
+            <img :src="`/Portfolio${certificate.image}`" alt="Certificate Image" />
         </div>
     </div>
 </template>
