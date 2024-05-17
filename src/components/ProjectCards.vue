@@ -32,6 +32,9 @@ const goToProject = (link) => {
     window.open(link, '_blank');
 }
 
+console.log(projectsData);
+
+
 </script>
 
 <style lang="scss" scoped>
