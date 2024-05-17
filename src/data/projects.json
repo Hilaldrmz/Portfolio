@@ -36,6 +36,13 @@
                 "description": "A simple todo list application built with Vue.js.",
                 "image": "/projects/todo-app-screenshot.gif",
                 "link": "https://github.com/Hilaldrmz/Todo-App"
+            },
+            {
+                "id": 6,
+                "name": "Pac-man Game",
+                "description": "This is a simple implementation of the classic Pac-Man game using JavaScript.",
+                "image": "/projects/pacman.gif",
+                "link": "https://hilaldrmz.github.io/pac-man/"
             }
         ]
     },
@@ -95,6 +102,13 @@
                 "description": "Bootstrap Medium Clone My project where I cloned the design of the Medium website’s homepage.",
                 "image": "/projects/MediumClonePage.gif",
                 "link": "https://github.com/Hilaldrmz/MediumClone"
+            },
+            {
+                "id": 3,
+                "name": "Pac-man Game",
+                "description": "",
+                "image": "/projects/placeholder.png",
+                "link": "This is a simple implementation of the classic Pac-Man game using JavaScript."
             }
         ]
     },
