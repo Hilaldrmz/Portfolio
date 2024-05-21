@@ -106,9 +106,16 @@
             {
                 "id": 3,
                 "name": "Pac-man Game",
-                "description": "",
-                "image": "/projects/placeholder.png",
-                "link": "This is a simple implementation of the classic Pac-Man game using JavaScript."
+                "description": "This is a simple implementation of the classic Pac-Man game using JavaScript.",
+                "image": "/projects/pacman.gif",
+                "link": "https://hilaldrmz.github.io/pac-man/"
+            },
+            {
+                "id": 4,
+                "name": "Tic-Tac-Toe Game",
+                "description": "This is a simple implementation of the classic Tic-tac-toe game using JavaScript.",
+                "image": "/projects/tictactoe.gif",
+                "link": "https://hilaldrmz.github.io/tic-toc-toe/"
             }
         ]
     },
