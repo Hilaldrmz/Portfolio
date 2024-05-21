@@ -21,7 +21,7 @@ export default defineConfig({
       }
     }
   },
-  // base: process.env.VITE_NODE_ENV === 'production' ? '/Portfolio/' : '/',
+
   base: process.env.NODE_ENV === 'production'
     ? '/Portfolio/'
     : '/',
