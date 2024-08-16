@@ -1,7 +1,7 @@
 <template>
     <div class="certificates">
         <div class="certificate" v-for="certificate in certificates" :key="certificate.id">
-            <img :src="`/Portfolio${certificate.image}`" alt="Certificate Image" />
+            <img :src="getImagePath(certificate.image)" alt="Certificate Image" />
         </div>
     </div>
 </template>
@@ -11,6 +11,16 @@ import { reactive } from 'vue';
 import data from '../data/certificates.json';
 
 const certificates = reactive(data.certificates).reverse();
+
+function getImagePath(imagePath) {
+    const baseURL = import.meta.env.BASE_URL;
+
+    if (import.meta.env.PROD !== true) {
+        return imagePath;
+    } else {
+        return baseURL + imagePath;
+    }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -88,7 +88,7 @@ const activeTab = ref('vue');
         }
     }
 
-    .projects{
+    .projects {
         margin: 4.88vh 8.33vw 4.88vh;
     }
 

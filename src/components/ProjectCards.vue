@@ -1,4 +1,3 @@
-
 <template>
     <div class="projects" v-for="projectType in projects" :key="projectType.type">
         <!-- <h2>{{ projectType.type }}</h2> -->
@@ -6,10 +5,16 @@
             <div class="project-info">
                 <h5>{{ project.name }}</h5>
                 <p>{{ project.description }}</p>
-                <button class="small fw-sb" @click="goToProject(project.link)">View Project</button>
+                <button class="small fw-sb" @click="goToProject(project.link)"
+                    :type="'video/' + project.image.split('.').pop()">View Project</button>
             </div>
             <div class="project-image">
-                <img :src="`/Portfolio${project.image}`" alt="Project Image">
+                <template v-if="isVideoFile(project.image)">
+                    <video :src="getImagePath(project.image)" autoplay muted loop></video>
+                </template>
+                <template v-else>
+                    <img :src="getImagePath(project.image)" alt="Project Image">
+                </template>
             </div>
         </div>
     </div>
@@ -32,8 +37,22 @@ const goToProject = (link) => {
     window.open(link, '_blank');
 }
 
-console.log(projectsData);
 
+function isVideoFile(filePath) {
+    const videoExtensions = ['webm', 'mp4', 'ogg'];
+    const extension = filePath.split('.').pop();
+    return videoExtensions.includes(extension.toLowerCase());
+}
+
+function getImagePath(imagePath) {
+    const baseURL = import.meta.env.BASE_URL;
+
+    if (import.meta.env.PROD !== true) {
+        return imagePath;
+    } else {
+        return baseURL + imagePath;
+    }
+}
 
 </script>
 
@@ -138,6 +157,14 @@ console.log(projectsData);
             object-fit: cover;
             border-radius: 0 14px 14px 0;
         }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0 14px 14px 0;
+        }
+
     }
 }
 </style>
