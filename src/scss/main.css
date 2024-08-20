@@ -48,7 +48,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Acorn Regular";
   overflow-x: hidden;
   width: 100dvw;
 }
@@ -73,7 +73,7 @@ body {
 h1,
 .h1 {
   font-size: 3.8146972656rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Acorn REgular";
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.6;
@@ -94,7 +94,7 @@ h1.fw-r,
 h2,
 .h2 {
   font-size: 3.0517578125rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Acorn REgular";
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.6;
@@ -115,7 +115,7 @@ h2.fw-r,
 h3,
 .h3 {
   font-size: 2.44140625rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Acorn REgular";
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.6;
@@ -136,7 +136,7 @@ h3.fw-r,
 h4,
 .h4 {
   font-size: 1.953125rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Acorn REgular";
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.6;
@@ -157,7 +157,7 @@ h4.fw-r,
 h5,
 .h5 {
   font-size: 1.5625rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Acorn REgular";
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.6;
@@ -178,7 +178,7 @@ h5.fw-r,
 h6,
 .h6 {
   font-size: 1.25rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Acorn REgular";
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.6;
@@ -240,6 +240,55 @@ p.fw-r,
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Acorn Light";
+  src: local("Acorn Light"), local("Acorn-Light"), url("../assets/fonts/Acorn-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acorn ExtraLight";
+  src: local("Acorn ExtraLight"), local("Acorn-ExtraLight"), url("../assets/fonts/Acorn-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acorn Bold";
+  src: local("Acorn Bold"), local("Acorn-Bold"), url("../assets/fonts/Acorn-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acorn Medium";
+  src: local("Acorn Medium"), local("Acorn-Medium"), url("../assets/fonts/Acorn-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acorn Thin";
+  src: local("Acorn Thin"), local("Acorn-Thin"), url("../assets/fonts/Acorn-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acorn Regular";
+  src: local("Acorn Regular"), local("Acorn-Regular"), url("../assets/fonts/Acorn-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acorn SemiBold";
+  src: local("Acorn SemiBold"), local("Acorn-SemiBold"), url("../assets/fonts/Acorn-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 #app {
   width: 100dvw;
   margin: 0;

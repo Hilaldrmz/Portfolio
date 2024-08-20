@@ -68,7 +68,7 @@ import Certificates from "../components/Certificates.vue";
         left: 0;
         width: 100%;
         height: 100%;
-        background: $bg-light;
+        background: $bg-dark;
         z-index: -20;
     }
 

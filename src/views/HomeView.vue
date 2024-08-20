@@ -1,12 +1,10 @@
 <template>
     <main class="main-content">
-        <h2 class="developer-role">
-            Front-end & UI DEVELOPER
-        </h2>
-
         <h1 class="developer-name">
-            Hello, my name <br>
-            is <span class="name">Hilal Durmaz</span>
+            <img class="star first" src="../assets/star.svg" alt="">
+            <span class="first-line"> Hi, I'm <span class="name">Hilal.</span></span> <br>
+            <span class="second-line">A frontend developer.</span>
+            <img class="star second" src="../assets/star.svg" alt="">
         </h1>
 
         <p class="developer-description">
@@ -27,7 +25,6 @@
             <h2>Selected Projects</h2>
             <ProjectCards type="Selected Projects" />
         </div>
-
         <img class="color-bottom" src="../assets/colors/homepage-bottom.png" alt="" srcset="">
     </main>
 </template>
@@ -43,7 +40,7 @@ const router = useRouter();
 <style lang="scss" scoped>
 .main-content {
     height: auto;
-    overflow: hidden;
+    // overflow: hidden;
     flex-grow: 0;
     display: flex;
     flex-direction: column;
@@ -65,46 +62,57 @@ const router = useRouter();
         z-index: -20;
     }
 
-    .developer-role {
-        width: 288px;
-        height: 27px;
-        flex-grow: 0;
-        background-image: linear-gradient(to right, $primary-color 0%, $secondary-color);
-        font-size: 20px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: left;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
     .developer-name {
-        width: 710px;
-        font-size: 57px;
-        font-weight: bold;
-        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 220px;
+        font-size:  8.58cqi;
+        font-family: 'Acorn Regular';
+        line-height: 1;
         color: $text-low;
+        white-space: nowrap;
 
         .name {
-            font-weight: bold;
+            font-family: 'Acorn Regular';
             background: $gradient;
             background-clip: text;
             -webkit-text-fill-color: transparent;
 
             @media screen and (max-width: 1300px) {}
         }
+
+        .second-line {
+            font-size: 106.5px;
+            font-size: 4.15cqi;
+            margin-top: -8cqi;
+        }
+        
+        .star {
+            width: 2cqi;
+            &.first {
+                margin-left: -45cqi;
+                margin-bottom: -1cqi;
+            }
+
+            &.second {
+                margin-right: -45cqi;
+                margin-top: -1cqi;
+            }
+        }
     }
 
     .developer-description {
-        min-width: 710px;
-        width: 49.31dvw;
+        // min-width: 710px;
+        width: 40dvw;
         font-size: 22px;
+        font-size: 0.857cqi;
         line-height: 1.64;
         color: $text-low;
+        font-family: 'Acorn Regular';
+        margin-right: 10px;
     }
 
     .buttons {
@@ -156,24 +164,24 @@ const router = useRouter();
         align-items: center;
         padding-top: 200px;
 
-        
-    h2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        font-size: 40px;
-        font-weight: bold;
-        text-align: center;
-        color: $text-low;
-        padding-bottom: -50px;
-    }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            color: $text-low;
+            padding-bottom: -50px;
+        }
 
     }
 
     .skills {
         position: absolute;
-        // max-height:85dvh;
+        max-width: 43dvw;
         display: flex;
         justify-content: right;
         align-items: center;
@@ -186,9 +194,9 @@ const router = useRouter();
         //     height: 40dvh;
         // }
 
-        @media screen and (max-width: 1360px) {
-            display: none;
-        }
+        // @media screen and (max-width: 1360px) {
+        //     display: none;
+        // }
     }
 
     .color-top {
@@ -199,11 +207,8 @@ const router = useRouter();
         z-index: -2;
         right: 0;
         top: 0;
+        max-height: 84dvw;
 
-        @media screen and (max-width: 1300px) {
-            max-height: 84dvw;
-            min-height: 636px;
-        }
     }
 
     .color-bottom {
@@ -212,7 +217,6 @@ const router = useRouter();
         justify-content: right;
         align-items: center;
         max-height: 40dvw;
-        min-height: 400px;
         z-index: -2;
         left: 0;
         bottom: 0;

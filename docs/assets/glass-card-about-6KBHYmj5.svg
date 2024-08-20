@@ -1,37 +1,25 @@
-<svg width="974" height="652" viewBox="0 0 974 652" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g filter="url(#filter0_bdd_235_450)">
-<rect x="6" y="6" width="954" height="632" rx="14" fill="url(#paint0_linear_235_450)" fill-opacity="0.2" shape-rendering="crispEdges"/>
-<rect x="6" y="6" width="954" height="632" rx="14" fill="url(#pattern0_235_450)" fill-opacity="0.05" shape-rendering="crispEdges"/>
-<rect x="6.75" y="6.75" width="952.5" height="630.5" rx="13.25" stroke="url(#paint1_linear_235_450)" stroke-opacity="0.28" stroke-width="1.5" shape-rendering="crispEdges"/>
-<rect x="6.75" y="6.75" width="952.5" height="630.5" rx="13.25" stroke="white" stroke-opacity="0.02" stroke-width="1.5" shape-rendering="crispEdges"/>
+<svg width="954" height="632" viewBox="0 0 954 632" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_b_235_450)">
+<rect width="954" height="632" rx="14" fill="url(#paint0_linear_235_450)" fill-opacity="0.2"/>
+<rect width="954" height="632" rx="14" fill="url(#pattern0_235_450)" fill-opacity="0.05"/>
+<rect x="0.75" y="0.75" width="952.5" height="630.5" rx="13.25" stroke="url(#paint1_linear_235_450)" stroke-opacity="0.28" stroke-width="1.5"/>
+<rect x="0.75" y="0.75" width="952.5" height="630.5" rx="13.25" stroke="white" stroke-opacity="0.02" stroke-width="1.5"/>
 </g>
 <defs>
-<filter id="filter0_bdd_235_450" x="-14" y="-14" width="994" height="672" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_b_235_450" x="-20" y="-20" width="994" height="672" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feGaussianBlur in="BackgroundImageFix" stdDeviation="10"/>
 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_235_450"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="4" dy="4"/>
-<feGaussianBlur stdDeviation="5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.117647 0 0 0 0 0.117647 0 0 0 0 0.117647 0 0 0 0.1 0"/>
-<feBlend mode="normal" in2="effect1_backgroundBlur_235_450" result="effect2_dropShadow_235_450"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-<feBlend mode="normal" in2="effect2_dropShadow_235_450" result="effect3_dropShadow_235_450"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_235_450" result="shape"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_235_450" result="shape"/>
 </filter>
 <pattern id="pattern0_235_450" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_235_450" transform="matrix(0.0018402 0 0 0.00277778 -0.0907058 0)"/>
 </pattern>
-<linearGradient id="paint0_linear_235_450" x1="891.857" y1="282.965" x2="433.764" y2="617.887" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_235_450" x1="885.857" y1="276.965" x2="427.764" y2="611.887" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4C1C24"/>
 <stop offset="1" stop-color="#FFCBD4"/>
 </linearGradient>
-<linearGradient id="paint1_linear_235_450" x1="25.8957" y1="70.5" x2="316.103" y2="232.704" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_235_450" x1="19.8957" y1="64.5" x2="310.103" y2="226.704" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>
 <stop stop-color="white"/>
 <stop offset="0.323413" stop-color="#F7F5F6" stop-opacity="0.8"/>

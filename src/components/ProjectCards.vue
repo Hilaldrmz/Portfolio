@@ -82,17 +82,19 @@ function getImagePath(imagePath) {
 
 
     .project-card {
-        width: 558px;
-        height: 294.8px;
+        min-width: 200px;
+        min-height: 100px;
+        width: 21.75cqi;
+        height: 11cqi;
         flex-grow: 0;
         display: flex;
-        flex-direction: row;
+        // flex-direction: column-reverse;
         justify-content: space-between;
         align-items: center;
         padding: 0;
         border-radius: 14px;
         // background: url('../assets/Glass card.svg');
-        background-image: url('../assets/glass-card-big.png');
+        background-image: url('../assets/Glass card.svg');
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 0 3.4px 36px 0 rgba(112, 144, 176, 0.1);
@@ -104,6 +106,7 @@ function getImagePath(imagePath) {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 300px;
 
 
 
@@ -111,7 +114,7 @@ function getImagePath(imagePath) {
             height: 28px;
             align-self: stretch;
             flex-grow: 0;
-            font-size: 20px;
+            font-size:  0.9cqi;
             font-weight: bold;
             font-stretch: normal;
             font-style: normal;
@@ -124,7 +127,7 @@ function getImagePath(imagePath) {
         p {
             align-self: stretch;
             flex-grow: 0;
-            font-size: 14px;
+            font-size: 0.5cqi;
             font-weight: 500;
             line-height: 2;
         }
@@ -145,11 +148,12 @@ function getImagePath(imagePath) {
     }
 
     .project-image {
-        width: 281px;
-        height: 295px;
+        min-width: 100px;
+        width: 11cqi;
+        height: 100%;
         flex-grow: 0;
         background-size: cover;
-        background-position: center;
+        background-position:top;
 
         img {
             width: 100%;
