@@ -82,9 +82,9 @@ function getImagePath(imagePath) {
 
 
     .project-card {
-        min-width: 200px;
-        min-height: 100px;
-        width: 21.75cqi;
+        min-width: 410px;
+        min-height: 210px;
+        width: 21cqi;
         height: 11cqi;
         flex-grow: 0;
         display: flex;
@@ -114,7 +114,7 @@ function getImagePath(imagePath) {
             height: 28px;
             align-self: stretch;
             flex-grow: 0;
-            font-size:  0.9cqi;
+            font-size:  1cqi;
             font-weight: bold;
             font-stretch: normal;
             font-style: normal;
@@ -149,7 +149,7 @@ function getImagePath(imagePath) {
 
     .project-image {
         min-width: 100px;
-        width: 11cqi;
+        width: 50%;
         height: 100%;
         flex-grow: 0;
         background-size: cover;
