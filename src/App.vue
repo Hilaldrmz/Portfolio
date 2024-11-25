@@ -8,10 +8,9 @@ import Contacts from "./components/Contacts.vue";
 </script>
 
 <template>
-  <div>
+  <div style="width: 100%">
     <Nav />
     <RouterView />
     <Contacts />
-    
   </div>
 </template>

@@ -39,6 +39,7 @@ const activeTab = ref('vue');
 
 <style lang="scss" scoped>
 .projects-view {
+    width: 100vw;
     &::before {
         content: "";
         position: fixed;
@@ -90,6 +91,7 @@ const activeTab = ref('vue');
 
     .projects {
         margin: 4.88vh 8.33vw 4.88vh;
+        
     }
 
     .color-top {

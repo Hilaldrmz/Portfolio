@@ -122,6 +122,7 @@ function getImagePath(imagePath) {
             letter-spacing: normal;
             text-align: left;
             margin-bottom: 15px;
+            white-space: nowrap;
         }
 
         p {
