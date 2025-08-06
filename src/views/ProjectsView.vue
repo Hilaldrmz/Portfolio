@@ -14,16 +14,22 @@
             <li class="tab" v-bind:class="{ 'tab-active': activeTab === 'figma' }" @click="activeTab = 'figma'">
                 Figma Projects
             </li>
+            <li class="tab" v-bind:class="{ 'tab-active': activeTab === 'wordpress' }" @click="activeTab = 'wordpress'">
+                Wordpress Projects
+            </li>
         </ul>
 
         <div v-if="activeTab === 'vue'" class="vue projects">
-            <ProjectCards type="Vue.js Projects" />
+            <ProjectCards categories="Vue.js Projects" />
         </div>
         <div v-if="activeTab === 'js'" class="js projects">
-            <ProjectCards type="JS Projects" />
+            <ProjectCards categories="JS Projects" />
         </div>
         <div v-if="activeTab === 'figma'" class="figma projects">
-            <ProjectCards type="Figma Projects" />
+            <ProjectCards categories="Figma Projects" />
+        </div>
+        <div v-if="activeTab === 'wordpress'" class="wordpress projects">
+            <ProjectCards categories="Wordpress Projects" />
         </div>
 
 

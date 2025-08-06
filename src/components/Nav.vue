@@ -3,7 +3,7 @@
         <div class="nav-items">
             <div class="wrap">
                 <router-link class="home" to="/">Hilal Durmaz</router-link>
-                <span class="developer-role">Front-end Developer</span>
+                <span class="developer-role">Software Developer</span>
             </div>
             <div class="pages">
                 <router-link to="/about">About</router-link>
@@ -22,6 +22,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 56px;
+    width: 100vw;
 
     .nav-items {
         display: flex;
@@ -60,14 +61,14 @@ nav {
             align-items: center;
             justify-content: center;
             gap: 10px;
-            
+
             .developer-role {
                 font-weight: bold;
                 background-image: linear-gradient(to right, $primary-color 0%, $secondary-color -11%);
                 -webkit-background-clip: text;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-                
+
             }
         }
     }

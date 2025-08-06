@@ -3,12 +3,12 @@
         <h1 class="developer-name">
             <img class="star first" src="../assets/star.svg" alt="">
             <span class="first-line"> Hi, I'm <span class="name">Hilal.</span></span> <br>
-            <span class="second-line">A frontend developer.</span>
+            <span class="second-line">A software developer.</span>
             <img class="star second" src="../assets/star.svg" alt="">
         </h1>
 
         <p class="developer-description">
-            I'm making the leap from a communication background to Frontend Development. Combining my communication
+            I'm making the leap from a communication background to software Development. Combining my communication
             expertise with technical know-how, I'm ready to embark on this new career journey and craft innovative
             solutions.
             Let's create something great together!
@@ -23,7 +23,7 @@
 
         <div class="selected-projects">
             <h2>Selected Projects</h2>
-            <ProjectCards type="Selected Projects" />
+            <ProjectCards categories="Selected Projects" />
         </div>
         <img class="color-bottom" src="../assets/colors/homepage-bottom.png" alt="" srcset="">
     </main>
@@ -39,6 +39,7 @@ const router = useRouter();
 
 <style lang="scss" scoped>
 .main-content {
+    // width: 100vw;
     height: auto;
     // overflow: hidden;
     flex-grow: 0;
@@ -69,7 +70,7 @@ const router = useRouter();
         align-items: center;
         align-content: center;
         font-size: 220px;
-        font-size:  8.58cqi;
+        font-size: 8.58cqi;
         font-family: 'Acorn Regular';
         line-height: 1;
         color: $text-low;
@@ -89,9 +90,10 @@ const router = useRouter();
             font-size: 4.15cqi;
             margin-top: -8cqi;
         }
-        
+
         .star {
             width: 2cqi;
+
             &.first {
                 margin-left: -45cqi;
                 margin-bottom: -1cqi;
@@ -163,6 +165,7 @@ const router = useRouter();
         justify-content: center;
         align-items: center;
         padding-top: 200px;
+        width: -webkit-fill-available;
 
 
         h2 {
