@@ -19,6 +19,26 @@
             "id": 4,
             "name": "UI/UX Design Bootcamp 102",
             "image": "/certificates/ui-ux-design-102.png"
+        },
+        {
+            "id": 5,
+            "name": "Google Ads Display Certification",
+            "image": "/certificates/Google-Ads-Display-Certification.png"
+        },
+        {
+            "id": 6,
+            "name": "Google Ads Search Certification",
+            "image": "/certificates/Google-Ads-Search-Certification.png"
+        },
+        {
+            "id": 7,
+            "name": "Google Ads Video Certification",
+            "image": "/certificates/Google-Ads-Video-Certification.png"
+        },
+        {
+            "id": 8,
+            "name": "Google Ads Creative Certification",
+            "image": "/certificates/Google-Ads-Creative-Certification.png"
         }
     ]
 }

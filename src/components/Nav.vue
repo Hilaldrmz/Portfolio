@@ -19,10 +19,11 @@
 <style lang="scss" scoped>
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 56px;
-    width: 100vw;
+    width: 100%;
+    padding: 0 2rem;
 
     .nav-items {
         display: flex;

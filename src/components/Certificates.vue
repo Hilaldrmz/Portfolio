@@ -1,7 +1,10 @@
 <template>
     <div class="certificates">
         <div class="certificate" v-for="certificate in certificates" :key="certificate.id">
-            <img :src="getImagePath(certificate.image)" alt="Certificate Image" />
+            <div @click="openCertificate(certificate)" class="certificate-wrapper">
+                <!-- Normal image certificates -->
+                <img :src="getImagePath(certificate.image)" alt="Certificate Image" />
+            </div>
         </div>
     </div>
 </template>
@@ -21,6 +24,7 @@ function getImagePath(imagePath) {
         return baseURL + imagePath;
     }
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -41,10 +45,19 @@ function getImagePath(imagePath) {
         border-radius: 14px;
         padding-top: 50px;
 
+        .certificate-wrapper {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
         img {
             width: 559.5px;
             height: 394px;
-            // object-fit: cover;
             border-radius: 14px;
         }
     }

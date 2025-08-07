@@ -1,32 +1,35 @@
 <template>
-    <main class="main-content">
-        <h1 class="developer-name">
-            <img class="star first" src="../assets/star.svg" alt="">
-            <span class="first-line"> Hi, I'm <span class="name">Hilal.</span></span> <br>
-            <span class="second-line">A software developer.</span>
-            <img class="star second" src="../assets/star.svg" alt="">
-        </h1>
+    <div class="home-page">
+        <div class="hero-section">
+            <h1 class="hero-title">
+                <img class="star-icon star-icon--left" src="../assets/star.svg" alt="">
+                <span class="hero-title__greeting"> Hi, I'm <span class="hero-title__name">Hilal.</span></span> <br>
+                <span class="hero-title__subtitle">A software developer.</span>
+                <img class="star-icon star-icon--right" src="../assets/star.svg" alt="">
+            </h1>
 
-        <p class="developer-description">
-            I'm making the leap from a communication background to software Development. Combining my communication
-            expertise with technical know-how, I'm ready to embark on this new career journey and craft innovative
-            solutions.
-            Let's create something great together!
-        </p>
-        <div class="buttons">
-            <button class="button-primary" @click="$router.push('/projects')">Projects</button>
-            <a class="button-secondary" href="https://www.linkedin.com/in/hilal-durmaz" target="_blank">Linkedin</a>
+            <p class="hero-description">
+                I'm making the leap from a communication background to software Development. Combining my communication
+                expertise with technical know-how, I'm ready to embark on this new career journey and craft innovative
+                solutions.
+                Let's create something great together!
+            </p>
+            <div class="action-buttons">
+                <button class="btn btn--primary" @click="$router.push('/projects')">Projects</button>
+                <a class="btn btn--secondary" href="https://www.linkedin.com/in/hilal-durmaz"
+                    target="_blank">Linkedin</a>
+            </div>
         </div>
 
-        <img class="color-top" src="../assets/colors/homepage-top.png" alt="" srcset="">
-        <img class="skills" src="../assets/skills.png" alt="" srcset="">
+        <img class="bg-decoration bg-decoration--top" src="../assets/colors/homepage-top.png" alt="" srcset="">
+        <img class="skills-showcase" src="../assets/skills.png" alt="" srcset="">
 
-        <div class="selected-projects">
+        <div class="featured-projects">
             <h2>Selected Projects</h2>
             <ProjectCards categories="Selected Projects" />
         </div>
-        <img class="color-bottom" src="../assets/colors/homepage-bottom.png" alt="" srcset="">
-    </main>
+        <img class="bg-decoration bg-decoration--bottom" src="../assets/colors/homepage-bottom.png" alt="" srcset="">
+    </div>
 </template>
 
 <script setup>
@@ -38,17 +41,14 @@ const router = useRouter();
 </script>
 
 <style lang="scss" scoped>
-.main-content {
-    // width: 100vw;
+.home-page {
     height: auto;
-    // overflow: hidden;
     flex-grow: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 32px;
-    padding: 0;
     margin: 50px 120px 50px 120px;
     margin: 4.88vh 8.33vw 4.88vh;
 
@@ -63,67 +63,85 @@ const router = useRouter();
         z-index: -20;
     }
 
-    .developer-name {
+    .hero-section {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        font-size: 220px;
-        font-size: 8.58cqi;
-        font-family: 'Acorn Regular';
-        line-height: 1;
-        color: $text-low;
-        white-space: nowrap;
+        align-items: start;
+        width: 100%;
 
-        .name {
+        @media screen and (max-width: 1360px) {
+            align-items: center;
+
+        }
+
+        .hero-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            font-size: 220px;
+            font-size: 8.58cqi;
             font-family: 'Acorn Regular';
-            background: $gradient;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            color: $text-low;
+            white-space: nowrap;
 
-            @media screen and (max-width: 1300px) {}
+            &__name {
+                font-family: 'Acorn Regular';
+                background: $gradient;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+
+            &__subtitle {
+                font-size: 106.5px;
+                font-size: 4.15cqi;
+                margin-top: -8cqi;
+            }
         }
 
-        .second-line {
-            font-size: 106.5px;
-            font-size: 4.15cqi;
-            margin-top: -8cqi;
-        }
-
-        .star {
+        .star-icon {
             width: 2cqi;
 
-            &.first {
+            &--left {
                 margin-left: -45cqi;
                 margin-bottom: -1cqi;
             }
 
-            &.second {
+            &--right {
                 margin-right: -45cqi;
                 margin-top: -1cqi;
             }
         }
-    }
 
-    .developer-description {
-        // min-width: 710px;
-        width: 40dvw;
-        font-size: 22px;
-        font-size: 0.857cqi;
-        line-height: 1.64;
-        color: $text-low;
-        font-family: 'Acorn Regular';
-        margin-right: 10px;
-    }
+        .hero-description {
+            // min-width: 710px;
+            width: 40dvw;
+            font-size: 22px;
+            font-size: 0.857cqi;
+            line-height: 1.64;
+            color: $text-low;
+            font-family: 'Acorn Regular';
+            margin-right: 10px;
+            margin-bottom: 25px;
 
-    .buttons {
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
+            @media screen and (max-width: 1360px) {
+                width: 70dvw;
+                font-size: 16px;
+                margin-top: 25px;
+            }
 
-        .button-primary,
-        .button-secondary {
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+
+        .btn {
             height: 3.5dvh;
             padding: 8px 24px;
             border-radius: 8px;
@@ -133,39 +151,42 @@ const router = useRouter();
             align-items: center;
             cursor: pointer;
 
-        }
+            &--primary {
+                background-image: $gradient;
+                border: none;
+                transition: all 500ms;
 
-        .button-primary {
-            background-image: $gradient;
-            border: none;
-            transition: all 500ms;
-
-            &:hover {
-                color: $text-light;
+                &:hover {
+                    color: $text-light;
+                }
             }
-        }
 
-        .button-secondary {
-            border: solid 2px $text-high;
-            background: transparent;
-            transition: all 500ms;
-            text-decoration: none;
+            &--secondary {
+                border: solid 2px $text-high;
+                background: transparent;
+                transition: all 500ms;
+                text-decoration: none;
 
-            &:hover {
-                color: $text-light;
+                &:hover {
+                    color: $text-light;
+                }
             }
         }
     }
 
-    .selected-projects {
+    .featured-projects {
         height: min-content;
         z-index: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 200px;
+        margin-top: 15rem;
         width: -webkit-fill-available;
+
+        @media screen and (max-width: 1360px) {
+            margin-top: 7rem;
+        }
 
 
         h2 {
@@ -182,9 +203,9 @@ const router = useRouter();
 
     }
 
-    .skills {
+    .skills-showcase {
         position: absolute;
-        max-width: 43dvw;
+        // max-width: 43dvw;
         display: flex;
         justify-content: right;
         align-items: center;
@@ -193,36 +214,33 @@ const router = useRouter();
         top: 0;
         transition: all 500ms ease-in-out;
 
-        // @media screen and (max-width: 1390px) {
-        //     height: 40dvh;
-        // }
-
-        // @media screen and (max-width: 1360px) {
-        //     display: none;
-        // }
+        @media screen and (max-width: 1360px) {
+            display: none;
+        }
     }
 
-    .color-top {
+    .bg-decoration {
         position: fixed;
         display: flex;
         justify-content: right;
         align-items: center;
         z-index: -2;
-        right: 0;
-        top: 0;
-        max-height: 84dvw;
 
-    }
+        &--top {
+            right: 0;
+            top: 0;
+            max-height: 84dvw;
 
-    .color-bottom {
-        position: fixed;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        max-height: 40dvw;
-        z-index: -2;
-        left: 0;
-        bottom: 0;
+            @media screen and (max-width: 1360px) {
+                max-height: 65dvw;
+            }
+        }
+
+        &--bottom {
+            max-height: 40dvw;
+            left: 0;
+            bottom: 0;
+        }
     }
 }
 </style>
