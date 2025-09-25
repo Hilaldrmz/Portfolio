@@ -1,5 +1,13 @@
 [
     {
+        "name": "Notion Widgets",
+        "description": "A collection of custom widgets for Notion, built using Vue.js and SCSS.",
+        "image": "/projects/notion-widgets.gif",
+        "link": "https://hilaldrmz.github.io/notion-widgets/",
+        "technologies": ["Vue.js", "SCSS"],
+        "categories": ["Vue.js Projects", "Selected Projects"]
+    },
+    {
         "name": "Lucid Engineering",
         "description": "Lucid Engineering & Fabrication is a metal fabrication company solutions to meet the demands of modern industry.",
         "image": "/projects/lucidEngineering.png",
