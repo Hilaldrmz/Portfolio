@@ -3,19 +3,28 @@
         <div class="hero-section">
             <h1 class="hero-title">
                 <img class="star-icon star-icon--left" src="../assets/star.svg" alt="">
-                <span class="hero-title__greeting"> Hi, I'm <span class="hero-title__name">Hilal.</span></span> <br>
-                <span class="hero-title__subtitle">A software developer.</span>
+                <span class="hero-title__greeting"> {{ hero.greeting }} <span class="hero-title__name">{{ hero.name
+                        }}</span></span> <br>
+                <span class="hero-title__subtitle">{{ hero.subtitle }}</span>
                 <img class="star-icon star-icon--right" src="../assets/star.svg" alt="">
             </h1>
 
             <p class="hero-description">
-                I'm making the leap from a communication background to software Development. Combining my communication
-                expertise with technical know-how, I'm ready to embark on this new career journey and craft innovative
-                solutions.
-                Let's create something great together!
+                {{ hero.description.split('\n\n')[0] }}<br><br>
+                {{ hero.description.split('\n\n')[1] }}
             </p>
             <div class="action-buttons">
                 <button class="btn btn--primary" @click="$router.push('/projects')">Projects</button>
+                <a class="btn btn--secondary btn--download" href="/Hilal-Durmaz-cv.pdf" download="Hilal-Durmaz-cv.pdf"
+                    @click="trackDownload">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        class="download-icon">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7,10 12,15 17,10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download CV
+                </a>
                 <a class="btn btn--secondary" href="https://www.linkedin.com/in/hilal-durmaz"
                     target="_blank">Linkedin</a>
             </div>
@@ -24,9 +33,20 @@
         <img class="bg-decoration bg-decoration--top" src="../assets/colors/homepage-top.png" alt="" srcset="">
         <img class="skills-showcase" src="../assets/skills.png" alt="" srcset="">
 
-        <div class="featured-projects">
+
+        <div class="components-section">
             <h2>Selected Projects</h2>
+            <div class="section-divider"></div>
             <ProjectCards categories="Selected Projects" />
+            <div id="work-experience">
+                <WorkExperiance />
+            </div>
+            <h2>Certificates</h2>
+            <div class="section-divider"></div>
+            <div class="carousel-container">
+                <Certificates />
+                <Certificates />
+            </div>
         </div>
         <img class="bg-decoration bg-decoration--bottom" src="../assets/colors/homepage-bottom.png" alt="" srcset="">
     </div>
@@ -34,10 +54,40 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { reactive, ref } from 'vue'
 import ProjectCards from "../components/ProjectCards.vue";
+import Certificates from '@/components/Certificates.vue';
+import WorkExperiance from '@/components/WorkExperiance.vue';
 
 const router = useRouter();
 
+const downloadCount = ref(parseInt(localStorage.getItem('cvDownloadCount') || '0'));
+
+const trackDownload = () => {
+    // Google Analytics tracking
+    if (window.gtag) {
+        window.gtag('event', 'cv_download', {
+            event_category: 'engagement',
+            event_label: 'cv_download',
+            value: 1
+        });
+    }
+
+    // Local storage counter for demonstration
+    const currentCount = parseInt(localStorage.getItem('cvDownloadCount') || '0');
+    const newCount = currentCount + 1;
+    localStorage.setItem('cvDownloadCount', newCount.toString());
+    downloadCount.value = newCount;
+
+    console.log(`CV Download tracked. Total downloads: ${newCount}`);
+};
+
+const hero = reactive({
+    greeting: "Hi, I'm",
+    name: "Hilal.",
+    subtitle: "A software developer.",
+    description: "I'm a developer focused on creating clear, user-friendly web interfaces, with practical experience using SQL and NoSQL. I work with modern tools like Vue.js, SCSS, and Figma, and enjoy improving how users interact with digital products.\n\nMy background in communication helps me understand user needs and collaborate effectively with teams, while my curiosity drives me to learn new technologies and create elegant, functional solutions."
+});
 </script>
 
 <style lang="scss" scoped>
@@ -171,10 +221,24 @@ const router = useRouter();
                     color: $text-light;
                 }
             }
+
+            &--download {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .download-icon {
+                    transition: transform 300ms ease;
+                }
+
+                &:hover .download-icon {
+                    transform: translateY(2px);
+                }
+            }
         }
     }
 
-    .featured-projects {
+    .components-section {
         height: min-content;
         z-index: 0;
         display: flex;
@@ -188,7 +252,6 @@ const router = useRouter();
             margin-top: 7rem;
         }
 
-
         h2 {
             display: flex;
             justify-content: center;
@@ -201,6 +264,15 @@ const router = useRouter();
             padding-bottom: -50px;
         }
 
+        .section-divider {
+            @include section-divider;
+        }
+    }
+
+    .carousel-container {
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
     }
 
     .skills-showcase {

@@ -13,7 +13,7 @@
 import { reactive } from 'vue';
 import data from '../data/certificates.json';
 
-const certificates = reactive(data.certificates).reverse();
+const certificates = reactive(data.certificates);
 
 function getImagePath(imagePath) {
     const baseURL = import.meta.env.BASE_URL;
@@ -30,20 +30,22 @@ function getImagePath(imagePath) {
 <style lang="scss" scoped>
 .certificates {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 80px;
+    gap: 2rem;
     width: 100%;
     color: $text-light;
-    border-radius: 14px;
-    padding-top: 50px;
+    padding: 2rem 0;
+    animation: slideRTL 40s linear infinite;
+    min-width: max-content;
+
+    &:hover {
+        animation-play-state: paused;
+    }
 
     .certificate {
         display: flex;
         justify-content: center;
-        gap: 80px;
-        border-radius: 14px;
-        padding-top: 50px;
+        min-width: 350px;
+        flex-shrink: 0;
 
         .certificate-wrapper {
             position: relative;
@@ -56,10 +58,21 @@ function getImagePath(imagePath) {
         }
 
         img {
-            width: 559.5px;
-            height: 394px;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
             border-radius: 14px;
         }
+    }
+}
+
+@keyframes slideRTL {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }
 </style>

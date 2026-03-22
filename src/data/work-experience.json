@@ -1,0 +1,52 @@
+{
+    "experiences": [
+        {
+            "id": 1,
+            "title": "KOBI Dynamic Executive Assistant",
+            "company": "Akbank",
+            "startDate": "Nov 2022",
+            "endDate": "Mar 2023",
+            "description": [
+                "Conducted sales and marketing activities for banking products and services",
+                "Managed customer relationships and provided banking consultation services"
+            ],
+            "skills": [
+                "Sales & Marketing",
+                "Banking Services",
+                "Customer Relationship Management"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "WordPress Developer | Corporate Web Design & SEO",
+            "company": "Laser KSH (Freelance)",
+            "startDate": "Sep 2024",
+            "endDate": "Nov 2024",
+            "description": [
+                "Built and customized responsive pages using WordPress and Elementor",
+                "Conducted keyword research and updated on-page SEO elements to enhance visibility",
+                "Improved site structure and integrated Google Analytics 4 and Google Tag Manager to monitor and assess traffic behavior",
+                "Optimized WordPress website for better user engagement and site performance"
+            ],
+            "skills": [
+                "WordPress",
+                "Elementor",
+                "SEO",
+                "Google Analytics 4",
+                "Google Tag Manager",
+                "Web Design"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Frontend Developer",
+            "company": "Lucid Engineering & Fabrication (Freelance)",
+            "startDate": "Nov 2024",
+            "endDate": "Dec 2024",
+            "description": [
+                "Frontend development work for engineering and fabrication company"
+            ],
+            "skills": ["Frontend Development", "Vue.js", "JavaScript", "CSS"]
+        }
+    ]
+}

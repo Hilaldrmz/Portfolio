@@ -31,6 +31,15 @@ $text-high: #393233;
 $shadow-1: 4px 4px 5px 0 rgba(74, 28, 35, 0.14);
 $shadow-2: 4px 4px 25px 0 hsla(350, 24%, 40%, 0.50);
 
+// Divider Mixin
+@mixin section-divider {
+  width: 5rem;
+  height: 0.25rem;
+  background-image: $gradient;
+  margin: 0 auto 4rem;
+  border-radius: 999px;
+}
+
 .glass-card {
   width: 288px;
   height: 295px;
@@ -62,8 +71,8 @@ $shadow-2: 4px 4px 25px 0 hsla(350, 24%, 40%, 0.50);
   margin: 0;
   padding: 0;
 
-      // Debugging
-    // outline: 1px solid red;
+  // Debugging
+  // outline: 1px solid red;
 }
 
 html {

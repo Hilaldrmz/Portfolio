@@ -8,6 +8,9 @@
             <li class="tab" v-bind:class="{ 'tab-active': activeTab === 'vue' }" @click="activeTab = 'vue'">
                 Vue.js Projects
             </li>
+            <li class="tab" v-bind:class="{ 'tab-active': activeTab === 'node' }" @click="activeTab = 'node'">
+                Node.js Projects
+            </li>
             <li class="tab" v-bind:class="{ 'tab-active': activeTab === 'js' }" @click="activeTab = 'js'">
                 JS Projects
             </li>
@@ -21,6 +24,9 @@
 
         <div v-if="activeTab === 'vue'" class="vue projects">
             <ProjectCards categories="Vue.js Projects" />
+        </div>
+        <div v-if="activeTab === 'node'" class="node projects">
+            <ProjectCards categories="Node.js Projects" />
         </div>
         <div v-if="activeTab === 'js'" class="js projects">
             <ProjectCards categories="JS Projects" />

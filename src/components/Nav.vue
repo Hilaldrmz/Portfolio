@@ -6,7 +6,7 @@
                 <span class="developer-role">Software Developer</span>
             </div>
             <div class="pages">
-                <router-link to="/about">About</router-link>
+                <a href="/#work-experience" @click="scrollToSection" class="work-exp-link">Work Experience</a>
                 <router-link to="/projects">Projects</router-link>
             </div>
         </div>
@@ -14,6 +14,13 @@
 </template>
 
 <script setup>
+const scrollToSection = (e) => {
+    e.preventDefault();
+    const element = document.getElementById('work-experience');
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -38,13 +45,15 @@ nav {
 
         .home,
         .wrap,
-        .pages>* {
+        .pages>*,
+        .work-exp-link {
             font-size: 20px;
             font-size: 0.80cqi;
             font-weight: 500;
             line-height: 1.4;
             color: $text-low;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .pages {
