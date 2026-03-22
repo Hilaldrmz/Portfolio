@@ -15,7 +15,7 @@
             </p>
             <div class="action-buttons">
                 <button class="btn btn--primary" @click="$router.push('/projects')">Projects</button>
-                <a class="btn btn--secondary btn--download" href="/Hilal-Durmaz-cv.pdf" download="Hilal-Durmaz-cv.pdf"
+                <a class="btn btn--secondary btn--download" href="Hilal-Durmaz-cv.pdf" download="Hilal-Durmaz-cv.pdf"
                     @click="trackDownload">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         class="download-icon">
@@ -53,33 +53,21 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 import ProjectCards from "../components/ProjectCards.vue";
 import Certificates from '@/components/Certificates.vue';
 import WorkExperiance from '@/components/WorkExperiance.vue';
 
-const router = useRouter();
-
-const downloadCount = ref(parseInt(localStorage.getItem('cvDownloadCount') || '0'));
 
 const trackDownload = () => {
     // Google Analytics tracking
-    if (window.gtag) {
-        window.gtag('event', 'cv_download', {
-            event_category: 'engagement',
-            event_label: 'cv_download',
-            value: 1
-        });
-    }
-
-    // Local storage counter for demonstration
-    const currentCount = parseInt(localStorage.getItem('cvDownloadCount') || '0');
-    const newCount = currentCount + 1;
-    localStorage.setItem('cvDownloadCount', newCount.toString());
-    downloadCount.value = newCount;
-
-    console.log(`CV Download tracked. Total downloads: ${newCount}`);
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: 'cv_download',
+        event_category: 'engagement',
+        event_label: 'cv_download',
+        value: 1
+    });
 };
 
 const hero = reactive({
